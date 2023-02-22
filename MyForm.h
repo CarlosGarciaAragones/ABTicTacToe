@@ -25,7 +25,7 @@ namespace ABconNET {
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estén usando. si
 		/// </summary>
 		~MyForm()
 		{
