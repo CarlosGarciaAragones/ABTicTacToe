@@ -9,6 +9,34 @@ namespace ABconNET {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	class Check
+	{
+	private:
+		Check();
+		~Check();
+		static Check* instance;
+
+	public:
+		Boolean checker;
+		static Check* getInstace() {
+			if (instance == nullptr)
+			{
+				instance = new Check();
+			}
+			return instance;
+		}		
+
+	};
+	Check* Check::instance = nullptr;
+
+	Check::Check()
+	{
+	}
+
+	Check::~Check()
+	{
+	}
+
 	/// <summary>
 	/// Resumen de MyForm
 	/// </summary>
@@ -25,7 +53,7 @@ namespace ABconNET {
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando. si
+		/// Limpiar los recursos que se estén usando. 
 		/// </summary>
 		~MyForm()
 		{
@@ -225,8 +253,10 @@ namespace ABconNET {
 
 		}
 		Boolean checker;
+
 #pragma endregion
-		void EnableFalse() {
+
+				void EnableFalse() {
 			button1->Enabled = false;
 			button2->Enabled = false;
 			button3->Enabled = false;

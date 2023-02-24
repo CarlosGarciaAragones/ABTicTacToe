@@ -9,4 +9,5 @@ void main(array<String^>^ args) {
     Application::SetCompatibleTextRenderingDefault(false);
     ABconNET::MyForm form;
     Application::Run(% form);
+    ABconNET::Check* myCheck = ABconNET::Check::getInstace();
 }
